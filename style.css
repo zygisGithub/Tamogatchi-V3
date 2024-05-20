@@ -1,0 +1,97 @@
+body {
+    background-color: #525252;
+    color: #ded0d0;
+    font-family: Arial;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    overflow: hidden;
+}
+#sprite {
+    position: absolute;
+    background-image: url("spritesheet.png");
+    background-size: 700px;
+    height: 75px;
+    width: 100px;
+    background-position: 0 0;
+    left: 400px;
+    bottom: 30px;
+}
+#room {
+    border: 3px solid black;
+    width: 800px;
+    height: 450px;
+    position: relative;
+    background-image: url("https://i.pinimg.com/736x/e5/8f/7d/e58f7daf3510d9de8ef54e03c824593b.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.uiDisplay {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    top: 30px;
+    position: absolute;
+    z-index: 9999;
+}
+.bar {
+    width: 200px;
+    height: 50px;
+    background-color: #a87f7f;
+    overflow: hidden;
+    color: #ded0d0;
+    display: flex;
+    border: 3px solid #3b3737;
+    position: relative;
+}
+#hpBar {
+    background-color: red;
+    width: 100%;
+    position: relative;
+    transition: width 0.3s ease;
+}
+#hpDisplay {
+    position: absolute;
+    top: 15px;
+    left: 35%;
+}
+#hungerBar {
+    background-color: #276b86;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+#hungerDisplay {
+    position: absolute;
+    top: 15px;
+    left: 35%;
+}
+#funBar {
+    background-color: #5f9350;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+#funDisplay {
+    position: absolute;
+    top: 15px;
+    left: 35%;
+}
+.bread {
+    position: absolute;
+    background-image: url("https://cdn.pixabay.com/photo/2014/04/03/00/30/bread-308470_1280.png");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    z-index: 9998;
+}
+.fall {
+    animation: fall 5s linear forwards;
+}
+@keyframes fall {
+    to {
+        top: 100%;
+    }
+}
